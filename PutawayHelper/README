@@ -1,1 +1,65 @@
+# PutawayHelper Agent
+
+## Overview
+
+PutawayHelper is a React-based interactive application designed for distribution centers (DCs). It helps putaway drivers and material handlers visualize and optimize their daily putaway tasks, making warehouse operations more efficient.
+
+## Features
+
+1. **Dynamic Putaway List** – Displays up to 10 putaway tasks with item names and locations.
+2. **Distance-Based Sorting** – Prioritizes putaways in the current aisle and sorts remaining tasks by proximity to the putaway driver's current location.
+3. **Current Location Tracking** – Updates the driver’s location after completing each task.
+4. **Distribution Center Map**:
+
+   * Visual grid representing 10 aisles and 15 slots per aisle.
+   * Highlights the putaway driver's current location and remaining putaway tasks.
+5. **Interactive Controls** – Users can mark tasks as complete, which updates the driver’s location and reorders remaining tasks.
+
+## User Interface
+
+* **Left Panel: Order of Putaways**
+
+  * Lists putaway tasks.
+  * Displays `Aisle` and `Slot` coordinates.
+  * Shows distance from the current location.
+  * `Complete` button to mark a task as done.
+
+* **Right Panel: Distribution Center Map**
+
+  * Grid representing aisles and slots.
+  * Highlights current location and remaining putaway tasks.
+
+## Requirements
+
+* React (v16.8+ for Hooks)
+* Tailwind CSS for styling
+* Modern browser support
+
+## Functional Requirements
+
+1. Putaway driver starts at `Aisle 1, Slot 1`.
+2. Initial putaway list contains 10 tasks randomly assigned to aisles and slots.
+3. Tasks in the current aisle are prioritized, then sorted by distance.
+4. Completing a putaway task updates the driver’s location and re-sorts remaining tasks.
+5. Map displays driver location, task positions, and numbered aisles and slots.
+
+## Visual Requirements
+
+* Highlight the putaway driver's current location in green.
+* Highlight remaining putaway tasks in blue.
+* Display order of putaways clearly on the left panel.
+* Map scales correctly for 10 aisles x 15 slots.
+
+## Assumptions
+
+* Putaway driver can enter/exit aisles only from the leftmost or rightmost slots.
+* Distance calculation considers horizontal movement along slots and vertical movement along aisles.
+* DC layout is static with no obstacles besides aisles and slots.
+
+## How to Run
+
+1. Clone the repository.
+2. Install dependencies: `npm install`.
+3. Start the development server: `npm start`.
+4. Open a browser at `http://localhost:3000` to interact with PutawayHelper.
 
